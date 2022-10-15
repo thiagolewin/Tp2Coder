@@ -11,9 +11,9 @@ html{
 
 body {
     background-color: #0E0A08;
-    margin: 0;
     height: 100vh;
-   
+   max-width: 2600px;
+   margin: auto;
 }
 
 header {
@@ -86,14 +86,12 @@ header h1 {
     cursor: pointer;
     color: #8a6db9;
 }
-main {
+.main__index {
     height: calc(100% - 106px);
     display: grid;
     grid-template-rows: repeat(12, 1fr);
 }
-main section {
-    display: flex;
-    justify-content: center;
+.main__index section {
     grid-row: 1/11;
 }
 #carouselExampleIndicators {
@@ -103,14 +101,14 @@ main section {
     margin: auto;
     height: 40%;
 }
-main section article {
+.main__index .fotos__inicio article {
     position: relative;
     margin-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-main section article h2 {
+.main__index .fotos__inicio article h2 {
     text-align: center;
     right: 0;
     left: 0;
@@ -123,7 +121,7 @@ main section article h2 {
     color: white;
     font-size: 2em;
 }
-main section article img {
+.main__index .fotos__inicio article img {
     height: auto;
     width: 300px;
     border: 2px solid #FFFFFF;
@@ -136,27 +134,27 @@ footer{
     justify-content: center;
     align-items: center;
 }
-.imagen2 {    
+.main__index .fotos__inicio .imagen2 {    
     display: none;
 }
-.imagen3 {    
+.main__index .fotos__inicio .imagen3 {    
     display: none;
 }
 @media screen and (min-width: 740px) {
-    main section {
+    .main__index .fotos__inicio {
         display: flex;
         justify-content: space-around;
     }
-    .imagen2 {    
+    .main__index .fotos__inicio .imagen2 {    
         display: none;
     }
-    .imagen3 {    
+    .main__index .fotos__inicio .imagen3 {    
         display: initial;
     }
 }
 @media screen and (min-width: 1320px) {
 
-    .imagen2 {    
+    .main__index .fotos__inicio .imagen2 {    
         display: initial;
     }
 
@@ -170,6 +168,9 @@ footer{
 .blanco {
     background-color: white;
 }
+.blancoTexto {
+    color: white;
+}
 
 .margen {
     margin-top: 172px;
@@ -181,4 +182,99 @@ footer{
 .visible {
     height: 202px;
     transform: translateX(0px);
+}
+
+/*galeria*/
+.main-gallery {
+    display: inline;
+}
+.main-gallery .galery {
+    padding: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    grid-auto-rows: 200px;
+    grid-gap: 30px;
+}
+.main-gallery .galery img {
+    height: 100%;
+    width: 100%;
+}
+.main-gallery .galery img:first-child {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+.main-gallery .galery img:nth-child(2) {
+    grid-row: span 2;
+}
+.main-gallery .galery img:nth-child(3) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.main-gallery .galery img:nth-child(4) {
+    grid-column: span 3;
+    grid-row: span 3;
+}
+.main-gallery .galery img:nth-child(5) {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+.main-gallery .galery img:nth-child(6) {
+    grid-row: span 2;
+}
+.main-gallery .galery img:nth-child(7) {
+    grid-row: span 2;
+}
+.main-gallery .galery img:nth-child(8) {
+    grid-row: span 2;
+}
+
+.main-gallery .galery img:nth-child(9) {
+    grid-column: span 2;
+}
+#footer__galery  {
+   height: 138.5px;
+}
+@media screen and (max-width: 1650px) {
+    .main-gallery .galery img:nth-child(2) {
+        grid-column: span 2;
+    }
+    .main-gallery .galery img:nth-child(3) {
+        grid-row: span 3;
+    }
+    .main-gallery .galery img:nth-child(9) {
+        grid-row: span 2;
+    }
+    .main-gallery .galery img:nth-child(10) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
+@media screen and (max-width: 1530px) {
+    .main-gallery .galery img:nth-child(1) {
+        grid-column: span 4;
+    }
+    .main-gallery .galery img:nth-child(2) {
+        grid-row: span 3;
+    }
+    .main-gallery .galery img:nth-child(4) {
+        grid-column: span 4;
+    }
+    .main-gallery .galery img:nth-child(10) {
+        grid-column: span 4;
+        grid-row: span 2;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .main-gallery .galery {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .main-gallery .galery img {
+        grid-row: span 3 !important;
+        grid-column: span 3 !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .main-gallery .galery img {
+        grid-row: span 2 !important;
+    }
 }

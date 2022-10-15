@@ -280,3 +280,13 @@ footer{
         grid-row: span 2 !important;
     }
 }
+
+/*galery boostrap */
+
+#main-bs img {
+    width: 100%;
+    height: 300px;
+}
+#violeta {
+    color: #5524a5;
+}

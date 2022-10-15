@@ -33,7 +33,12 @@ hamburgesa.addEventListener(`click`, ()=> {
     }
 })
 
-let a = article[0].children[0].height + 60;
+let a = article[0].children[0].height;
+if (window.screen.availHeight < 860) {
+    a+=10;
+} else {
+    a+=60;
+}
 for (i in article) {
     let h2 = article[i].children[1];
     h2.style.marginTop = `${a}px`;

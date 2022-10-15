@@ -15,7 +15,9 @@ body {
    max-width: 2600px;
    margin: auto;
 }
-
+#body-index {
+    overflow-y: hidden;
+}
 header {
     background-color: #FFFFFF;
     display: flex;

@@ -127,7 +127,16 @@ header h1 {
     height: auto;
     width: 300px;
     border: 2px solid #FFFFFF;
+    animation: subirBajar 5s infinite linear;
 }
+
+@keyframes subirBajar {
+    0% {transform: translateY(0);}
+    25% { transform:translateY(-2vh);}
+    50% {transform: translateY(0);}
+    75% {transform: translateY(2vh);}
+}
+
 footer{
     font-size: 2em;
     grid-row: 11/13;
